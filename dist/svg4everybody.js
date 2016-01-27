@@ -11,6 +11,8 @@
                 fragment.appendChild(clone.firstChild);
             }
             svg.appendChild(fragment);
+            var event = document.createEvent("Event");
+            event.initEvent("svg:embeded", !0, !0), svg.dispatchEvent(event);
         }
     }
     function loadreadystatechange(xhr) {
